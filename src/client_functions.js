@@ -5,12 +5,12 @@
 
  function getClientsURIs(checkNames, clientNames) {
    var URIs = [];
-   var dimensionURI = '/clients';
+   var dimensionURI = '/entities';
    // look for clientName in dimensions
    if (clientNames.length) {
      for (let i = 0; i < clientNames.length; i++) {
        var aClientName = clientNames[i];
-       dimensionURI = '/clients/' + aClientName;
+       dimensionURI = '/entities/' + aClientName;
        URIs.push(dimensionURI);
      }
    }
@@ -18,7 +18,7 @@
      URIs.push(dimensionURI);
    }
    URIs.push('/events');
-   URIs.push('/results');
+//   URIs.push('/results');
 
    return URIs;
  }
